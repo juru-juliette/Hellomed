@@ -1,58 +1,410 @@
-{%extends 'base.html'%}
-{% block content %}
-{% load bootstrap4 %}
-{% load static%}
+<!DOCTYPE html>
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Hellomed - Responsive HTML5 Template</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-{% block styles %}
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="static/images/apple-touch-icon.png">
 
-<!-- Bootstrap CSS File -->
-<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="static/css/pogo-slider.min.css">
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="static/css/style.css">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="static/css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/custom.css">
 
-<!-- Libraries CSS Files -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<link href="lib/animate/animate.min.css" rel="stylesheet">
-<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Cookie|Great+Vibes&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
-{% bootstrap_css %}
-{% endblock %}
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-<style>
-    img {
-    height: 100vh;
-    width: 100vh;
-}
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
 
-</style>
-<body>
-    
-    <!--  -->
-    <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
-
-
-        <div class="carousel-inner" role="listbox">
-    
-          <div class="carousel-item active">
-    
-            <!-- <img class="d-block w-100" src="https://farm5.static.flickr.com/4530/26749582429_ddd272d6f0_b.jpg"
-              alt="First slide"> -->
-              <img  class="d-block w-100" src="static/images/img1.jpg"
-              alt="First slide" >
-              
-    
-                    <div class="carousel-caption d-none d-md-block" id="mt">
-    
-                      <h1 id="head1"> <strong> welcome to hello medi </strong></h1>
-    
-                     </div>
-                    
-    
+	<!-- LOADER -->
+     <!-- <div id="preloader">
+		<div class="loader">
+			<img src="images/preloader.gif" alt="" />
+		</div>
+    </div>end loader -->
+    <!-- END LOADER -->
+	
+	<!-- Start top bar -->
+	<div class="main-top">
+		<div class="container">
+			
+		</div>
+	</div>
+	<!-- End top bar -->
+	
+	<!-- Start header -->
+	<header class="top-header">
+		<nav class="navbar header-nav navbar-expand-lg">
+            <div class="container">
+				<!-- <a class="navbar-brand" href="index.html"><img src="static/images/logo.png" alt="image"></a> -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="#home">Home</a></li>
+                        <li><a class="nav-link" href="#about">About Us</a></li>
+                        <li><a class="nav-link" href="#services">Our services</a></li>
+						<li><a class="nav-link" href="#appointment">Appointment</a></li>
+                        <li><a class="nav-link" href="#For patient">For Patient</a></li>
+                        <li><a class="nav-link" href="#contact">Contact</a></li>
+                        <li><a class="nav-link" href="#Login">Login</a></li>
+                    </ul>
                 </div>
-              </div>
             </div>
+        </nav>
+	</header>
+	<!-- End header -->
+	
+	<!-- Start Banner -->
+	<div class="ulockd-home-slider">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="pogoSlider" id="js-main-slider">
+					<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(static/images/slider-01.jpg);">
+						<div class="lbox-caption pogoSlider-slide-element">
+							<div class="lbox-details">
+								<h1>Welcome to Hellomed</h1>
+								<p>Get quality care in the comfort of your own home </p>
+								<a href="#" class="btn">Book Now</a>
+							</div>
+						</div>
+					</div>
+					<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(static/images/slider-02.jpg);">
+						<div class="lbox-caption pogoSlider-slide-element">
+							<div class="lbox-details">
+								<p>Say goodbye to uncomfortable waiting rooms</p>
+								<p>Hellomed makes medical care at home quick easy and affordable!</p>
+								<!-- <a href="#appointment" class="btn">Appointment</a> -->
+							</div>
+						</div>
+					</div>
+					<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(static/images/slider-03.jpg);">
+						<div class="lbox-caption pogoSlider-slide-element">
+							<div class="lbox-details">
+								<h1>Welcome to Hellomed</h1>
+								<p>Get quality care in the comfort of your own home </p>
+							</div>
+						</div>
+						
+					</div>
+				</div><!-- .pogoSlider -->
+			</div>
+		</div>
+	</div>
+	<!-- End Banner -->
+	
+	<!-- Start About us -->
+	<div id="about" class="about-box">
+		<div class="about-a1">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="title-box">
+							<h2>About Us</h2>
+							
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="row align-items-center about-main-info">
+							<div class="col-lg-6 col-md-6 col-sm-12">
+								<h2> Hellomed, </h2>
+								<p>is the online platform available on mobile which helps you to request and book a doctor whenever you need to. </p>
+								<p>We provide delivery for HIV/AIDA,Tuberculosis,hepatitis B&C and Diabetes. just register your medecines and we'll take care of the rest </p>
+								<!-- <a href="#" class="new-btn-d br-2">Read More</a> -->
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12">
+								<div class="about-m">
+									<ul id="banner">
+										<li>
+											<img src="static/images/about-img-01.jpg" alt="">
+										</li>
+										<li>
+											<img src="static/images/about-img-02.jpg" alt="">
+										</li>
+										<li>
+											<img src="static/images/about-img-03.jpg" alt="">
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End About us -->
+	
+	<!-- Start Services -->
+	<div id="services" class="services-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Services</h2>
+						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p> -->
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="owl-carousel owl-theme">
+						<div class="item">
+							<div class="serviceBox">
+								<div class="service-icon"><i class="fa fa-h-square" aria-hidden="true"></i></div>
+								<h3 class="title">Common issues</h3>
+								<p class="description">
+									Fever <br> Cough <br> Cold <br> Flu.
+								</p>
+								<!-- <a href="#" class="new-btn-d br-2">Read More</a> -->
+							</div>
+						</div>
+						<div class="item">
+							<div class="serviceBox">
+								<div class="service-icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
+								<h3 class="title">Ear, Nose, Throat</h3>
+								<p class="description">
+									Sore troat/shep throat <br> Ear infections <br> sinus infection <br> Nosal conjestion<br>
+								</p>
+								<!-- <a href="#" class="new-btn-d br-2">Read More</a> -->
+							</div>
+						</div>
+						<div class="item">
+							<div class="serviceBox">
+								<div class="service-icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></div>
+								<h3 class="title">Gastrointestinal</h3>
+								<p class="description">
+								    Upset Stomach <br>Vomiting <br> Diarrhoe <br> Indigestion <br>
+								</p>
+						
+							</div>
+						</div>
+						<div class="item">
+							<div class="serviceBox">
+								<div class="service-icon"><i class="fa fa-stethoscope" aria-hidden="true"></i></div>
+								<h3 class="title">Other Injuries</h3>
+								<p class="description">
+									Joint & back pain <br> Cuts & Scrapes <br>strains & Sprains <br> Urine & Vaginal infection. Accusantium consequuntur.
+								</p>
+								<a href="#" class="new-btn-d br-2">Read More</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="serviceBox">
+								<div class="service-icon"><i class="fa fa-wheelchair" aria-hidden="true"></i></div>
+								<h3 class="title">Lorem ipsum dolor</h3>
+								<p class="description">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+								</p>
+								<a href="#" class="new-btn-d br-2">Read More</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="serviceBox">
+								<div class="service-icon"><i class="fa fa-plus-square" aria-hidden="true"></i></div>
+								<h3 class="title">Lorem ipsum dolor</h3>
+								<p class="description">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+								</p>
+								<a href="#" class="new-btn-d br-2">Read More</a>
+							</div>
+						</div>
+						<div class="item"> 
+							<div class="serviceBox">
+								<div class="service-icon"><i class="fa fa-medkit" aria-hidden="true"></i></div>
+								<h3 class="title">Lorem ipsum dolor</h3>
+								<p class="description">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+								</p>
+								<a href="#" class="new-btn-d br-2">Read More</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="serviceBox">
+								<div class="service-icon"><i class="fa fa-user-md" aria-hidden="true"></i></div>
+								<h3 class="title">Lorem ipsum dolor</h3>
+								<p class="description">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+								</p>
+								<a href="#" class="new-btn-d br-2">Read More</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="serviceBox">
+								<div class="service-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></div>
+								<h3 class="title">Lorem ipsum dolor</h3>
+								<p class="description">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+								</p>
+								<a href="#" class="new-btn-d br-2">Read More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<!-- End Services -->
+	
+	
+	
+	<!-- Start Team -->
+	
+	<!-- End Team -->
+	
+	<!-- Start Contact -->
+	<div id="contact" class="contact-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Contact us</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				
+				<div class="col-lg-12 col-xs-12">
+				  <div class="contact-block">
+					<form id="contactForm">
+					  <div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+								<div class="help-block with-errors"></div>
+							</div>                                 
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+								<div class="help-block with-errors"></div>
+							</div> 
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="text" placeholder="Your number" id="number" class="form-control" name="number" required data-error="Please enter your number">
+								<div class="help-block with-errors"></div>
+							</div> 
+						</div>
+						<div class="col-md-12">
+							<div class="form-group"> 
+								<textarea class="form-control" id="message" placeholder="Your Message" rows="8" data-error="Write your message" required></textarea>
+								<div class="help-block with-errors"></div>
+							</div>
+							<div class="submit-button text-center">
+								<button class="btn btn-common" id="submit" type="submit">Send Message</button>
+								<div id="msgSubmit" class="h3 text-center hidden"></div> 
+								<div class="clearfix"></div> 
+							</div>
+						</div>
+					  </div>            
+					</form>
+				  </div>
+				</div>
+				
+				
+				<div class="col-lg-12 col-xs-12">
+					<div class="left-contact">
+						<h2>Address</h2>
+						<div class="media cont-line">
+							<div class="media-left icon-b">
+								<i class="fa fa-location-arrow" aria-hidden="true"></i>
+							</div>
+							<div class="media-body dit-right">
+								<h4>Address</h4>
+								<p>Kigali, Rwanda</p>
+							</div>
+						</div>
+						<div class="media cont-line">
+							<div class="media-left icon-b">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+							</div>
+							<div class="media-body dit-right">
+								<h4>Email</h4>
+								<a href="#">hellomedrwanda@gmail.com</a><br>
+								
+							</div>
+						</div>
+						<div class="media cont-line">
+							<div class="media-left icon-b">
+								<i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+							</div>
+							<div class="media-body dit-right">
+								<h4>Phone Number</h4>
+								<a href="#">+250785424960</a><br>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+	</div>
+	<!-- End Contact -->
+	
+	<!-- Start Subscribe -->
+	
+	<!-- End Subscribe -->
+	
+	<!-- Start Footer -->
+	<footer class="footer-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<p class="footer-company-name">All Rights Reserved. &copy; 2020 <a href="#">Hellomed</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+	
+	<a href="#" id="scroll-to-top" class="new-btn-d br-2"><i class="fa fa-angle-up"></i></a>
+
+	<!-- ALL JS FILES -->
+	<script src="static/js/jquery.min.js"></script>
+	<script src="static/js/popper.min.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+	<script src="static/js/jquery.magnific-popup.min.js"></script>
+    <script src="static/js/jquery.pogo-slider.min.js"></script> 
+	<script src="static/js/slider-index.js"></script>
+	<script src="static/js/smoothscroll.js"></script>
+	<script src="static/js/TweenMax.min.js"></script>
+	<script src="static/js/main.js"></script>
+	<script src="static/js/owl.carousel.min.js"></script>
+	<script src="static/js/form-validator.min.js"></script>
+    <script src="static/js/contact-form-script.js"></script>
+	<script src="static/js/isotope.min.js"></script>	
+	<script src="static/js/images-loded.min.js"></script>	
+    <script src="static/js/custom.js"></script>
 </body>
-{%endblock%}
+</html>

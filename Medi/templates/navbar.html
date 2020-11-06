@@ -203,32 +203,6 @@
           <li class="menu-active"><a href="{% url 'home' %}">Home</a></li>
           <li><a href="#about">About Us</a></li>
 
-
-          {% if user.is_authenticated %}
-          <li class="nav-item" style="margin-top: -4px;">
-            <a href="{% url 'profile' user.id%}">{{user.username}}
-              {% if user.profile.profile_pic%}
-              <img src="{{user.profile.profile_pic.url}}" alt="profile"
-                style="border-radius: 50%;height: 35px;width:35px"> </a>
-            {% else %}
-            <img src="https://www.seekpng.com/png/small/41-410093_circled-user-icon-user-profile-icon-png.png"
-              alt="profile" style="border-radius: 50%;height: 35px;width:35px">
-            {% endif %}
-
-
-          </li>
-          
-                <li class="nav-item">
-                  <a href="/logout">Logout</a>
-                </li>
-             
-          {% else %}
-          <li class="nav-item">
-            <a href="/accounts/login/"> Sign In </a>
-          </li>
-
-          {% endif %}
-
         </ul>
 
 

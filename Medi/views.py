@@ -5,7 +5,7 @@ from django.http  import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
-def welcome(request):
+def home(request):
     # return HttpResponse('Welcome to Hellomed')
     return render(request, 'index.html')
     
