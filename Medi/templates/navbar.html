@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <style>
+    /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+    #header {
+      padding: 30px 0;
+      height: 92px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      transition: all 0.5s;
+      z-index: 997;
+    }
+
+    #header.header-scrolled {
+      background: #fff;
+      padding: 20px 0;
+      height: 72px;
+      transition: all 0.5s;
+    }
+
+    #header #logo {
+      float: left;
+
+    }
+
+    #header #logo h1 {
+      font-size: 34px;
+      margin-left: 220px;
+      line-height: 1;
+      font-family: 'Source Code Pro', monospace;
+      font-weight: 700;
+      letter-spacing: 3px;
+      
+    }
+
+    #header #logo h1 a,
+    #header #logo h1 a:hover {
+      color: #111;
+      padding-left: 10px;
+      border-left: 4px solid #18d26e;
+    }
+
+    #header #logo img {
+      padding: 0;
+      margin: 0;
+    }
+
+    /*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+    /* Nav Menu Essentials */
+
+    .nav-menu,
+    .nav-menu * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      /* position: fixed; */
+    }
+
+    .nav-menu ul {
+      position: absolute;
+      display: none;
+      top: 100%;
+      left: 0;
+      z-index: 99;
+    }
+
+    .nav-menu li {
+      position: relative;
+      white-space: nowrap;
+    }
+
+    .nav-menu>li {
+      float: left;
+    }
+
+    .nav-menu li:hover>ul,
+    .nav-menu li.sfHover>ul {
+      display: block;
+    }
+
+    .nav-menu ul ul {
+      top: 0;
+      left: 100%;
+    }
+
+    .nav-menu ul li {
+      min-width: 180px;
+    }
+
+    /* Nav Menu Arrows */
+
+    .sf-arrows .sf-with-ul {
+      padding-right: 30px;
+    }
+
+    .sf-arrows .sf-with-ul:after {
+      content: "\f107";
+      position: absolute;
+      right: 15px;
+      font-family: 'FontAwesome';
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    .sf-arrows ul .sf-with-ul:after {
+      content: "\f105";
+    }
+
+    /* Nav Meu Container */
+
+    #nav-menu-container {
+      float: right;
+      margin: 0;
+    }
+
+    /* Nav Meu Styling */
+
+    .nav-menu a {
+      padding: 0 2px 4px 2px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #111;
+      text-transform: uppercase;
+      position: relative;
+
+    }
+
+    .nav-menu li:hover>a,
+    .nav-menu>.menu-active>a {
+      color: #18d26e;
+      text-decoration: none;
+    }
+
+    .nav-menu>li {
+      margin-left: 10px;
+    }
+
+    .nav-menu ul {
+      margin: 4px 0 0 0;
+      padding: 10px;
+      box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+      background: #fff;
+    }
+
+    .nav-menu ul li {
+      transition: 0.3s;
+    }
+
+    .nav-menu ul li a {
+      padding: 10px;
+      color: #333;
+      transition: 0.3s;
+      display: block;
+      font-size: 13px;
+      text-transform: none;
+    }
+
+    .nav-menu ul li:hover>a {
+      color: #111;
+    }
+
+    .nav-menu ul ul {
+      margin: 0;
+    }
+  </style>
+
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container-fluide">
+
+
+      <div id="logo" class="pull-left">
+        <h1> <a> <strong>Fitness</strong> </a></h1>
+
+      </div>
+
+      <nav id="nav-menu-container">
+
+        <ul class="nav-menu">
+
+          <li class="menu-active"><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+
+
+          {% if user.is_authenticated %}
+          <li class="nav-item" style="margin-top: -4px;">
+            <a href="{% url 'profile' user.id%}">{{user.username}}
+              {% if user.profile.profile_pic%}
+              <img src="{{user.profile.profile_pic.url}}" alt="profile"
+                style="border-radius: 50%;height: 35px;width:35px"> </a>
+            {% else %}
+            <img src="https://www.seekpng.com/png/small/41-410093_circled-user-icon-user-profile-icon-png.png"
+              alt="profile" style="border-radius: 50%;height: 35px;width:35px">
+            {% endif %}
+
+
+          </li>
+          
+                <li class="nav-item">
+                  <a href="/logout">Logout</a>
+                </li>
+             
+          {% else %}
+          <li class="nav-item">
+            <a href="/accounts/login/"> Sign In </a>
+          </li>
+
+          {% endif %}
+
+        </ul>
+
+
+       
+      </nav>
+  </header><!-- #header -->
+
+</body>
+
+</html>
