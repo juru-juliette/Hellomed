@@ -8,4 +8,5 @@ from django.shortcuts import render
 def home(request):
     # return HttpResponse('Welcome to Hellomed')
     return render(request, 'index.html')
+
     
