@@ -1,0 +1,67 @@
+{% load bootstrap4 %} 
+{% load static %}
+{% block content %}
+
+  
+  {{form.media}}
+
+{% block styles %} {% bootstrap_css %}
+  <link rel="stylesheet" href="{% static 'static/css/style.css' %}"> {% endblock %}
+
+</head>
+
+<style>
+  
+    #form{
+      border-style: ridge;
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    #hh1{
+      text-align: center;
+      color: #13a456;
+      font-family: 'FontAwesome';
+      font-weight: bold;
+      font-size: 40px; 
+      
+    }
+    </style>
+<body>
+
+  <!-- <form  action="{%url 'post'%}" method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+
+    {% bootstrap_form form%}
+    <input type="submit" class="btn btn-success btn-lg" value="Post">
+  </form> -->
+
+  <!--  -->
+  <h1 id="hh1">Render-vouz</h1> <br>
+  <div class="col-md-8">
+  <div class="panel-body">
+    
+    <form  action="{%url 'post'%}" method="post" enctype="multipart/form-data">
+      {% csrf_token%}
+      {% bootstrap_form form layout='inline' %}
+      
+      <div class="form-group">
+        
+        <input type="submit" class="btn btn-success btn-lg" value="Make an Appointment">
+
+      </div>
+      
+
+    </form>
+
+</div>
+</div>
+
+   {% block scripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  {% bootstrap_javascript %} {% endblock %}
+
+</body>
+
+{% endblock %}
