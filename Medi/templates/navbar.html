@@ -38,27 +38,24 @@
 		<nav class="navbar header-nav navbar-expand-lg">
             <div class="container">
 				<a class="navbar-brand" href="index.html"><img src="static/images/logos.png" alt="image" width="180px" height="70px"></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
+				
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
-					{% if user.is_authenticated %}
+                  {% if user.is_authenticated %}
                     <ul class="navbar-nav">
-                        <li><a class="nav-link active" href="#home">Home</a></li>
+                        <li><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
                         <li><a class="nav-link" href="#about">About Us</a></li>
                         <li><a class="nav-link" href="#services">Our services</a></li>
-						<li><a class="nav-link" href="#appointment">Appointment</a></li>
-                        <li><a class="nav-link" href="#For patient">For Patient</a></li>
-                        <li><a class="nav-link" href="#contact">Contact</a></li>
-						<li><a class="nav-link" href="/accounts/login">Login</a></li>
-						<!-- <li><a class="nav-link" href="/accounts/password/change">Change Password</a></li>
-						<li><a class="nav-link" href="/logout">Logout</a></li> -->
-						
-					</ul>
-			{% endif %}
-				</div>
+					            	<li><a class="nav-link" href="For Patient">For Patient</a></li>
+                        <li><a class="nav-link" href="#Contact">Contact</a></li>
+                        <li><a class="nav-link" href="/accounts/register">Login</a></li>
+                        <li><a class="nav-link" href="/logout">Logout</a></li>
+                  
+                    </ul>
+                    
+                    
+        
+                    {% endif %}
+                  </div>
 		
             </div>
         </nav>
