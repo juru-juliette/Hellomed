@@ -327,6 +327,32 @@
 	</div>
 	<!-- End Contact -->
 	
+	<!-- Start Subscribe -->
+	<div class="subscribe-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="subscribe-inner text-center clearfix">
+						<h2>Subscribe  <br> To get more medical information</h2>
+						
+						<form action="{%url 'newsToday'%}" method="post">
+							{%csrf_token%}
+							<div class="form-group">
+								<input class="form-control-1" id="name-1" name="name" placeholder="Name" required="" type="text"><br> <br> <br>
+								<input class="form-control-1" id="email-1" name="email" placeholder="Email Address" required="" type="text">
+							</div>
+							<div class="form-group">
+								<button type="submit" class="new-btn-d br-2">
+									Subscribe
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Subscribe -->
 	<!-- Start Footer -->
 	<footer class="footer-box">
 		<div class="container">

@@ -4,8 +4,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from django.contrib.auth.tokens import PasswordResetTokenGenerator
-from django.utils import six
+
 class Profile(models.Model):
     profile_pic = models.ImageField(upload_to='photos/',null=True)
     fullname = models.CharField(max_length=255,null=True)
@@ -25,19 +24,9 @@ class Profile(models.Model):
     def delete_profile(self):
         self.delete() 
 
-class Yourmodel(models.Model):
-    first_name = models.CharField(max_length=200)
-    second_name = models.CharField(max_length=200)
-    email = models.EmailField(max_length=100)
-
-   
-class TokenGenerator(PasswordResetTokenGenerator):
-    def _make_hash_value(self, user, timestamp):
-        return (
-            six.text_type(user.pk) + six.text_type(timestamp) +
-            six.text_type(user.is_active)
-        )
-account_activation_token = TokenGenerator()
+class NewsRecipients(models.Model):
+    name = models.CharField(max_length = 30)
+    email = models.EmailField()
 
 class Appointment(models.Model):
     first_name = models.CharField(max_length=200)
