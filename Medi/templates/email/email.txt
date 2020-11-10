@@ -2,8 +2,3 @@ Hello {{name}}
 
 Welcome to the Moringa tribune newsletter You will find the most exciting news about Moringa School
 
-{% autoescape off %}
-Hi ,
-Please click on the link to confirm your registration,
-http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
-{% endautoescape %}

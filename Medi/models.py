@@ -28,6 +28,24 @@ class NewsRecipients(models.Model):
     name = models.CharField(max_length = 30)
     email = models.EmailField()
 
+
+
+class Article(models.Model):
+    title = models.CharField(max_length =60)
+    post = models.TextField()
+    pub_date = models.DateTimeField(auto_now_add=True)
+    article_image = models.ImageField(upload_to = 'articles/')
+@classmethod
+def todays_news(cls):
+        today = dt.date.today()
+        news = cls.objects.filter(pub_date__date = today)
+        return news
+@classmethod
+def days_news(cls,date):
+        news = cls.objects.filter(pub_date__date = date)
+        return news
+
+
 class Appointment(models.Model):
     first_name = models.CharField(max_length=200)
     middle_name = models.CharField(max_length=200)
