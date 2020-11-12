@@ -1,3 +1,4 @@
+{%extends 'base.html'%}
 {% load bootstrap4 %} 
 {% load static %}
 {% block content %}
@@ -11,7 +12,12 @@
 </head>
 
 <style>
-  
+    #top{
+       background-image: url('https://images.unsplash.com/photo-1512069511692-b82d787265cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=399&q=80');
+       background-size: 78% 100%;
+       background-repeat: no-repeat;
+       height: 410px;
+      }
     #form{
       border-style: ridge;
       width: 100%;
@@ -30,33 +36,44 @@
     </style>
 <body>
 
-  <!-- <form  action="{%url 'post'%}" method="post" enctype="multipart/form-data">
-    {%csrf_token%}
+<div class="container-fluide"> <br> <br> <br>
 
-    {% bootstrap_form form%}
-    <input type="submit" class="btn btn-success btn-lg" value="Post">
-  </form> -->
-
-  <!--  -->
-  <h1 id="hh1">Render-vouz</h1> <br>
-  <div class="col-md-8">
-  <div class="panel-body">
-    
-    <form  action="{%url 'post'%}" method="post" enctype="multipart/form-data">
-      {% csrf_token%}
-      {% bootstrap_form form layout='inline' %}
-      
-      <div class="form-group">
-        
-        <input type="submit" class="btn btn-success btn-lg" value="Make an Appointment">
-
+      <div class="row">
+      <!-- Empty div -->
+      <div class="col-md-5">
+        <div id="top"></div>
       </div>
       
-
-    </form>
-
-</div>
-</div>
+      <!-- empty div -->
+      <div class="col-md-3">
+          
+          <div class="panel panel-default">
+              
+            <div class="panel-heading">
+            
+              <h1 id="hh1">Render-vouz</h1> <br>
+            </div>
+            <div class="panel-body">
+    
+              <form  action="{%url 'post'%}" method="post" >
+                {% csrf_token%}
+                {% bootstrap_form form layout='inline' %}
+                
+                <div class="form-group">
+                  
+                  <input type="submit" class="btn btn-success btn-lg" value="Make an Appointment">
+          
+                </div>
+                
+          
+              </form>
+             
+            </div>
+    
+          </div>
+      </div>
+    </div>
+  </div>
 
    {% block scripts %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -1,4 +1,4 @@
+
 Hello {{name}}
 
-Welcome to the Moringa tribune newsletter You will find the most exciting news about Moringa School
-
+Welcome to Hellomed Newsletter,We promise to keep you up-to-date with the sweetest news on Health.

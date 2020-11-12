@@ -7,4 +7,4 @@ from .models import *
 admin.site.register(Appointment)
 admin.site.register(NewsRecipients)
 
-admin.site.register(Article)
+admin.site.register(News_showbiz)

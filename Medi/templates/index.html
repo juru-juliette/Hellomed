@@ -11,10 +11,11 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
  
      <!-- Site Metas -->
-    <title>Hellomed</title>  
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Medical & Healthcare Website |Hellomed </title>  
+    <meta name="keywords" content="Tips| Tuberculosis,Diabetes,HIV/AIDS">
+	<meta name="description" content="Book a doctor whenever you need to 
+	We provide delivery for HIV/AIDS,Tuberculosis,hepatitis B&C and Diabetes.">
+    <meta name="author" content="Hellomed">
 
     <!-- Site Icons -->
     
@@ -335,12 +336,13 @@
 					<div class="subscribe-inner text-center clearfix">
 						<h2>Subscribe  <br> To get more medical information</h2>
 						
-						<form action="{%url 'newsToday'%}" method="post">
+						<form action="{%url 'newsUpdate'%}" method="post">
 							{%csrf_token%}
-							<div class="form-group">
+							<!-- <div class="form-group">
 								<input class="form-control-1" id="name-1" name="name" placeholder="Name" required="" type="text"><br> <br> <br>
 								<input class="form-control-1" id="email-1" name="email" placeholder="Email Address" required="" type="text">
-							</div>
+							</div> -->
+							{% bootstrap_form letterForm layout='inline' %}}
 							<div class="form-group">
 								<button type="submit" class="new-btn-d br-2">
 									Subscribe
@@ -385,6 +387,7 @@
 	<script src="static/js/isotope.min.js"></script>	
 	<script src="static/js/images-loded.min.js"></script>	
 	<script src="static/js/custom.js"></script>
+	<script src="//code.tidio.co/ri3cqf5qwhhvczpiickk5uchjrufcswr.js" async></script>
 	{% bootstrap_javascript %} {% endblock %}
 </body>
 {%endblock%}

@@ -42,14 +42,6 @@ INSTALLED_APPS = [
     'channels',
 ]
 
-# Email configurations remember to install python-decouple
-
-# EMAIL_USE_TLS = ('EMAIL_USE_TLS')
-# EMAIL_HOST = 'EMAIL_HOST'
-# EMAIL_PORT = ('EMAIL_PORT')
-# EMAIL_HOST_USER = 'kangabejuliette'
-# EMAIL_HOST_PASSWORD = 'juruyuly1'
-
 
 
 MIDDLEWARE = [
@@ -142,8 +134,9 @@ STATICFILES_DIRS = [
 # subscription code
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'kangabejuliette@gmail.com'
-EMAIL_HOST_PASSWORD = 'juruyuly1'
+EMAIL_HOST_PASSWORD = 'juruyuly'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False

@@ -8,10 +8,10 @@ from django.urls import path
 from . import views
 
 urlpatterns=[
-    url('^$',views.home,name = 'home'),
+    # url('^$',views.home,name = 'home'),
     url(r'^post$', views.post, name='post'),
-    url(r'^article/(\d+)',views.article,name ='article'),
-    url(r'^$',views.news_today,name='newsToday'),
+    # url(r'^article/(\d+)',views.article,name ='article'),
+    url(r'',views.news_update,name='newsUpdate'),
     path('<str:room_name>/', views.room, name='room'),
     
     ]

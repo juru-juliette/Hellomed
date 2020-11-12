@@ -2,35 +2,18 @@
 from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models.signals import post_save
-from django.dispatch import receiver
-
-class Profile(models.Model):
-    profile_pic = models.ImageField(upload_to='photos/',null=True)
-    fullname = models.CharField(max_length=255,null=True)
-    username = models.OneToOneField(User,on_delete=models.CASCADE,related_name='profile')
-    phone_number = models.CharField(max_length = 10,blank =True)
-    email=models.EmailField()
-
-    def __str__(self):
-        return self.username.username
-
-    def save_profile(self):
-        self.save()    
-        
-    def update_profile(self):
-        self.update()
-
-    def delete_profile(self):
-        self.delete() 
+from django.utils import timezone
+from datetime import datetime
 
 class NewsRecipients(models.Model):
     name = models.CharField(max_length = 30)
     email = models.EmailField()
+    
+    def __str__(self):
+        return self.email
 
 
-
-class Article(models.Model):
+class News_showbiz(models.Model):
     title = models.CharField(max_length =60)
     post = models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)
