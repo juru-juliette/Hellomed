@@ -11,15 +11,16 @@ from django.core.mail import send_mail
 
 from .models import *
 from .forms import PostForm,NewsLetterForm
-from django.contrib.auth import authenticate, login
+# from django.contrib.auth import authenticate, login
+
 # Create your views here.
 
 # @login_required(login_url='/accounts/login/')
 # def home(request):
-    # return HttpResponse('Welcome to Hellomed')
-    # return render(request, 'index.html')
+#     return HttpResponse('Welcome to Hellomed')
+#     return render(request, 'index.html')
 
-
+@login_required(login_url='/accounts/login/')
 def news_update(request):
    
     if request.method == 'POST':

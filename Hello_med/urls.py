@@ -21,7 +21,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^',include('Medi.urls')),
     url(r'^accounts/', include('registration.backends.simple.urls')),
-    url('accounts/', include('django.contrib.auth.urls')),
+    
     # url(r'^logout/$', views.logout, {"next_page": '/'}), 
 
   ]
