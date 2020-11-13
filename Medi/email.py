@@ -3,7 +3,7 @@ from django.template.loader import render_to_string
 from django.core.mail import EmailMultiAlternatives
 def send_welcome_email(name,receiver):
     # Creating message subject and sender
-    subject = 'Welcome to the Hellomed NewsLetter'
+    subject = 'Warm Welcome'
     sender = 'kangabejuliette@gmail.com'
 
     #passing in the context vairables
